@@ -1,0 +1,373 @@
+:root {
+	--primary-color: #12161a;
+	--secondary-color: #1f719d;
+	--accent-color: #fd5507;
+	--bg-color: #f7fdfd;
+	--header-bg-color: #dce6ea;
+	--box-color: #f8f9f9;
+	--button-color: #6fa9dc;
+}
+
+.dark-mode {
+	--primary-color: #dcdcdc;
+	--secondary-color: #b9c1df;
+	--accent-color: #ff79c6;
+	--bg-color: #1e1f29;
+	--header-bg-color: #323345;
+	--box-color: #2c2e3e;
+	--button-color: #facda9;
+}
+
+/* Reset + typography */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+	transition: 500ms;
+}
+
+/* Base layout */
+body {
+	background: var(--bg-color);
+	color: var(--primary-color);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	gap: 40px;
+}
+
+section {
+	margin-top: 80px;
+}
+
+section h2 {
+	max-width: 100%;
+	margin: 20px;
+	text-align: center;
+	color: var(--primary-color);
+}
+section h3 {
+	margin-top: 15px;
+}
+
+/* Theme toggle */
+#theme-switch {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	background: var(--bg-color);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 1002;
+}
+
+#theme-switch svg {
+	width: 25px;
+	height: 25px;
+	fill: var(--button-color);
+	transition: fill 0.3s ease;
+}
+#theme-switch svg:last-child {
+	display: none;
+}
+.dark-mode #theme-switch svg:first-child {
+	display: none;
+}
+.dark-mode #theme-switch svg:last-child {
+	display: block;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: var(--header-bg-color);
+	z-index: 1002;
+}
+.nav-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.nav-container h1 {
+	margin: 0;
+	margin-right: auto;
+}
+
+.nav-container ul {
+	flex: 1;
+	display: flex;                
+	justify-content: center;
+	gap: 20px;
+	list-style: none;
+}
+
+.nav-container a {
+	text-decoration: none;
+	color: var(--secondary-color);
+	display: flex;
+	align-items: center;
+	height: 60px;
+	padding: 0 10px;
+}
+
+
+.nav-container a:hover {
+    transform: scale(1.1);
+    color: var(--accent-color);
+}
+
+
+/* About section: group hover */
+.intro-about {
+	display: flex;
+	align-items: center;
+}
+
+/* Shared “card” styles */
+.skills-container,
+.education-item,
+.certification-item {
+	max-width: 70%;
+	margin: 40px auto 0;
+	background: var(--box-color);
+	border-radius: 2rem;
+}
+
+
+.skills-container:hover,
+.education-item:hover,
+.certification-item:hover {
+	transform: scale(1.1);
+	box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+.intro-about {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	margin: 0 auto;
+	gap: 40px; 
+}
+
+.profile-container {
+	max-width: 420px;
+	min-width: 320px;
+	padding: 20px;
+	gap: 10px;
+}
+
+.profile-image {
+	width: 100%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid var(--secondary-color);
+}
+
+.about {
+	padding: 20px;
+	text-align: center;
+	max-width: 70%;
+	background-color: var(--box-color);
+	border-radius: 2rem;
+}
+
+.profile-image:hover,
+.about:hover {
+	transform: scale(1.05);
+	border-color: var(--accent-color);
+}
+
+.about p {
+	line-height: 1.5;
+}
+
+/* Skills */
+.skills-container {
+	display: flex;
+	flex-direction: column;
+}
+@media (min-width: 768px) {
+	.skills-container {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+.skills-category {
+	flex: 0.7;
+	padding: 2rem;
+}
+.skills-category h3 {
+	color: var(--secondary-color);
+	border-bottom: 2px solid var(--primary-color);
+	text-align: center;
+	margin-bottom: 2rem;
+}
+.skills-category ul {
+	list-style: none;
+	padding-left: 20px;
+}
+.skills-category li {
+	position: relative;
+	padding-left: 1.5rem;
+	margin-bottom: 0.8rem;
+}
+.skills-category li::before {
+	content: "✔";
+	color: var(--secondary-color);
+	position: absolute;
+	left: 0;
+}
+
+/* Projects slider */
+#projects {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.slider-container {
+	position: relative;
+	max-width: 850px;
+	width: 70%;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.slider-container:hover {
+	transform: scale(1.05);
+}
+
+.slider-track {
+	display: flex;
+	transition: 0.5s;
+}
+.project-card {
+	min-width: 100%;
+}
+.project-title,
+.project-info {
+	background: var(--box-color);
+	padding: 20px 40px;
+	color: var(--secondary-color);
+}
+.project-title {
+	font-weight: bold;
+	font-size: 1.2rem;
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+}
+.project-info {
+	border-bottom-left-radius: 4rem;
+	border-bottom-right-radius: 4rem;
+	font-size: 1rem;
+}
+.project-info ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: var(--primary-color);
+}
+.project-info li {
+	padding-top: 20px;
+}
+.read-more-link {
+	display: inline-block;
+	padding: 8px;
+	background: var(--secondary-color);
+	opacity: 0.5;
+	color: var(--bg-color);
+	border-radius: 12px;
+	text-decoration: none;
+}
+.read-more-link:hover {
+	background: var(--accent-color);
+	opacity: 1;
+}
+
+/* Slider buttons */
+.slider-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: var(--secondary-color);
+	border: none;
+	font-size: 2rem;
+	border-radius: 1rem;
+	opacity: 0.6;
+	cursor: pointer;
+	padding: 0.3rem 0.7rem;
+	z-index: 10;
+	transition: 0.3s;
+}
+.slider-btn:hover {
+	background: var(--accent-color);
+	opacity: 1;
+}
+.slider-btn.prev {
+	left: -10px;
+}
+.slider-btn.next {
+	right: -10px;
+}
+
+/* Education & Certifications */
+.education-row,
+.certification-row {
+	display: flex;
+	justify-content: space-between;
+	font-weight: bold;
+	padding: 20px;
+}
+.edu-university,
+.edu-date {
+	font-size: 1.1rem;
+	color: var(--secondary-color);
+}
+.education-paragraph,
+.certification-paragraph {
+	padding: 5px 0px 5px 20px;
+}
+
+/* Contact */
+.contact {
+	display: flex;
+	justify-content: center;
+	font-size: 40px;
+}
+.contact ul {
+	display: flex;
+	gap: 100px;
+	list-style: none;
+	padding: 40px;
+}
+.contact li {
+	padding: 40px;
+}
+.contact a {
+	color: var(--secondary-color);
+}
+.contact a:hover {
+	color: var(--accent-color);
+}
+.contact li:hover {
+	transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+	text-align: center;
+	color: var(--secondary-color);
+	margin-top: 100px;
+}
