@@ -22,27 +22,18 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Inter', sans-serif;
+	font-family: 'Georgia', sans-serif;
 	transition: 500ms;
 }
 
-body {
-	background: var(--bg-color);
-	color: var(--primary-color);
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-	gap: 40px;
-}
-
 section {
-	margin-top: 80px;
+	margin: 100px auto;
+	width: 70%;
+	max-width: 100%;
 }
 
 section h2 {
 	max-width: 100%;
-	margin: 20px;
 	text-align: center;
 	color: var(--primary-color);
 }
@@ -82,24 +73,47 @@ section h3 {
 	display: block;
 }
 
-html, body {
+@media (max-width: 500px) {
+	#theme-switch {
+		width: 30px;
+		height: 30px;
+	}
+
+	#theme-switch svg {
+		width: 15px;
+		height: 15px;
+	}
+
+}
+
+body {
+	background: var(--bg-color);
+	color: var(--primary-color);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	gap: 40px;
 	padding: 0;
 	margin: 0;
 }
 
 nav{
+	width: 100%;
 	padding: 10px 30px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background: var(--header-bg-color);
-	position: relative;
+	position: fixed;
 	height: 70px;
+	z-index: 1001;
 
 }
 
-.name {
-	color: var(--primary-color)
+.name a {
+	color: var(--primary-color);
+	text-decoration: none;
 }
 
 nav ul{
@@ -125,7 +139,15 @@ nav ul li a {
 	font-size: 30px;
 }
 
-@media (max-width: 900px) {
+nav li:hover {
+	transform: scale(1.1)
+}
+nav li a:hover, 
+.name a:hover{
+	color: var(--accent-color)
+}
+
+@media (max-width: 950px) {
 	nav ul{
 		position: absolute;
 		top: 70px;
@@ -157,7 +179,6 @@ nav ul li a {
 .skills-container,
 .education-item,
 .certification-item {
-	max-width: 70%;
 	margin: 40px auto 0;
 	background: var(--box-color);
 	border-radius: 2rem;
@@ -174,7 +195,6 @@ nav ul li a {
 .intro-about {
 	display: flex;
 	flex-direction: column;
-	width: 70%;
 	margin: 0 auto;
 	gap: 40px; 
 }
@@ -197,7 +217,6 @@ nav ul li a {
 .about {
 	padding: 20px;
 	text-align: center;
-	max-width: 70%;
 	background-color: var(--box-color);
 	border-radius: 2rem;
 }
@@ -256,8 +275,7 @@ nav ul li a {
 }
 .slider-container {
 	position: relative;
-	max-width: 850px;
-	width: 70%;
+	max-width: 100%;
 	overflow: hidden;
 	transition: 0.5s;
 }
@@ -367,12 +385,12 @@ nav ul li a {
 }
 .contact ul {
 	display: flex;
-	gap: 100px;
+	gap: 80px;
 	list-style: none;
 	padding: 40px;
 }
 .contact li {
-	padding: 40px;
+	padding: 60px 60px;
 }
 .contact a {
 	color: var(--secondary-color);
@@ -385,9 +403,30 @@ nav ul li a {
 	transform: scale(1.2);
 }
 
+@media (max-width: 768px) {
+	.contact li {
+		padding: 60px 30px;
+	}
+
+}
+
+@media (max-width: 540px) {
+	.contact li {
+		padding: 0;
+	}
+
+}
+
+@media (max-width: 400px) {
+	.contact ul {
+		display: flex;
+		flex-direction: column;
+	}
+
+}
+
 /* Footer */
 footer {
 	text-align: center;
 	color: var(--secondary-color);
-	margin-top: 100px;
 }
