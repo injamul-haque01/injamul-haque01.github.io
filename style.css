@@ -125,7 +125,7 @@ nav ul li a {
 	font-size: 30px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 	nav ul{
 		position: absolute;
 		top: 70px;
