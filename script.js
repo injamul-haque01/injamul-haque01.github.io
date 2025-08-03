@@ -46,3 +46,16 @@ themeSwitch.addEventListener('click', () => {
 
   window.addEventListener('resize', updateSlider);
 
+
+let menuList = document.getElementById("menuList")
+menuList.style.maxHeight = "0px";
+
+function toggleMenu(){
+  if(menuList.style.maxHeight == "0px")
+  {
+      menuList.style.maxHeight = "300px";
+  }
+  else{
+      menuList.style.maxHeight = "0px";
+  }
+}
