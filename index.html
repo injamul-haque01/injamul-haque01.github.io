@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Injamul Haque Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="Dissertation_script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
+
+<!-- Navigation bar -->
+
     <nav>
         <div class="name">
             <h1><a href="#">Injamul Haque</a></h1>
         </div>
+
         <ul id="menuList">
             <li><a href="#about-me">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experiene</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        
         <div class="menu-icon">
             <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
         </div>
     </nav>
-    
+<!-- Light mode/Dark mode theme -->
+
 <button id="theme-switch">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#1f1f1f"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
 </button>
+
+<!-- Profile picture & abput me section -->
 
 <main>
     <section id="about-me">
@@ -45,6 +56,8 @@
             </div>
         </div>
     </section>
+
+<!-- Skills  -->
 
     <section id="skills">
         <h2>Skills</h2>
@@ -72,75 +85,82 @@
         </div>
     </section>
 
+<!-- Projects-->
+
     <section id="projects">
         <h2>Projects</h2>
-            <div class="slider-container">
-            <button class="slider-btn prev">&#10094;</button>
+        <div class="slider-container">
+        <button class="slider-btn prev">&#10094;</button>
             <div class="slider-track">
+
                 <div class="project-card">
-                    <div class="project-title">Dissertation | Sep 2024 - Jun 2025</div>
-                        <div class="project-info">
-                            <ul>
-                                <li>Changed the stress, deformation and frequency of a swept-back wing by tailoring the CFRP fiber orientation of a swept-back wing skin.</li>
-                                <li><strong>Role:</strong> Independent research project for my final year (year 3) dissertation, with Assistant from supervisor within the same department</li>
-                                <li><strong>Result:</strong> 15.92% stress, 9.29% deflection reduction at 30° fiber angle compared to full aluminium alloy: Al 7075 T6 </li>
-                                <li><strong>Tools:</strong> SolidWorks, Ansys Fluent/APDL/Mechanical, Python</li>
-                                <li><strong>Challenges:</strong> Navigating a steep learning curve by gaining profeciencies in multiple softwares, whilst also ensuring smooth intergration between CFD and FEA solvers</li>
-                                <li><a href="your-link-here.html" class="read-more-link" target="_blank" rel="noopener noreferrer">Read More</a></li>
-                            </ul>
-                        </div>
+                <div class="project-title">Dissertation: Effect of ply fiber orientation on the static and dynamic behavior of a composite swept-back wing | Sep 2024 - Jun 2025</div>
+                    <div class="project-info">
+                        <ul>
+                            <li>Reduced the stress, deformation and increased frequency of a swept-back wing by tailoring the CFRP fiber orientation of a swept-back wing skin.</li>
+                            <li><strong>Role:</strong> Independent research project for my final year (year 3) dissertation, with Assistant from supervisor within the same department</li>
+                            <li><strong>Result:</strong> 15.92% stress, 9.29% deflection reduction at 30° fiber angle compared to full aluminium alloy: Al 7075 T6 </li>
+                            <li><strong>Tools:</strong> SolidWorks, Ansys Fluent/APDL/Mechanical, Python (post processing)</li>
+                            <li><strong>Challenges:</strong> Getting throught a steep learning curve by gaining profeciencies in multiple softwares, whilst also ensuring smooth intergration between CFD and FEA solvers</li>
+                            <li><a href="/Projects/Dissertation.html" class="read-more-link" rel="noopener">Read More</a></li>
+                        </ul>
                     </div>
+                </div>
+
                 <div class="project-card">
                     <div class="project-title">Multirotor Design | Jan 2024 - May 2024</div>
-                        <div class="project-info">
-                            <ul>
-                                <li>Designed recreational UAV in group project</li>
-                                <li><strong>Role:</strong> Project manager, FEA analyst</li>
-                                <li><strong>Tools:</strong> Ansys Mechanical, Excel</li>
-                                <li><a href="your-link-here.html" class="read-more-link" target="_blank" rel="noopener noreferrer">Read More</a></li>
-                            </ul>
-                        </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-title">Performance plotter | Jul 2025</div>
-                        <div class="project-info">
-                            <ul>
-                                <li>Help plot multiple performance data for different airfoil shape. The performance data includes: CL vs AoA, CL vs CD and CL vs L/D</li>
-                                <li><strong>Role:</strong> Sole Developer</li>
-                                <li><strong>Result:</strong> The user can input csv files which contains performance data. The programme automatically plots the performance data, in which you can save as a png file.</li>
-                                <li><strong>Tools:</strong> Python, C++</li>
-                                <li><strong>Challenge:</strong> Python</li>
-                                <li><a href="your-link-here.html" class="read-more-link" target="_blank" rel="noopener noreferrer">Read More</a></li>
-                            </ul>
-                        </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-title">Control system plotter | Jul 2025</div>
-                        <div class="project-info">
-                            <ul>
-                                <li>Help plot multiple control system plots for compairasion</li>
-                                <li><strong>Role:</strong> Sole Developer</li>
-                                <li><strong>Result:</strong> The user makes control systems, in which the programme can make it so that it plots multiple control system plots in one plot</li>
-                                <li><strong>Tools:</strong> MATLAB</li>
-                                <li><strong>Challenge:</strong> </li>
-                                <li><a href="your-link-here.html" class="read-more-link" target="_blank" rel="noopener noreferrer">Read More</a></li>
-                            </ul>
-                        </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-title">Responsive Portfolio Website | Jul 2025 - Present</div>
-                        <div class="project-info">
-                            <ul>
-                                <li>Designed and developed a responsive profiolio website to showcase my engineering projects and techinical skills </li>
-                                <li><strong>Role:</strong> Sole Developer</li>
-                                <li><strong>Result:</strong> Delivered a clean, user friendly interface with intutive navigation designed for both desktop and mobile use</li>
-                                <li><strong>Tools:</strong> HTML, CSS, JavaScript</li>
-                                <li><strong>Challenge:</strong>  </li>
-                                <li><a href="https://github.com/injamul-haque01/injamul-haque01.github.io" class="read-more-link" target="_blank" rel="noopener noreferrer">Read More</a></li>
-                            </ul>
-                        </div>
+                    <div class="project-info">
+                        <ul>
+                            <li>Designed recreational UAV in group project</li>
+                            <li><strong>Role:</strong> Project manager, FEA analyst</li>
+                            <li><strong>Tools:</strong> Ansys Mechanical, Excel</li>
+                            <li><a href="your-link-here.html" class="read-more-link" target="_blank" rel="noopener">Read More</a></li>
+                        </ul>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <div class="project-title">Performance plotter | Jul 2025</div>
+                    <div class="project-info">
+                        <ul>
+                            <li>Help plot multiple performance data for different airfoil shape. The performance data includes: CL vs AoA, CL vs CD and CL vs L/D</li>
+                            <li><strong>Role:</strong> Sole Developer</li>
+                            <li><strong>Result:</strong> The user can input csv files which contains performance data. The programme automatically plots the performance data, in which you can save as a png file.</li>
+                            <li><strong>Tools:</strong> Python, C++</li>
+                            <li><strong>Challenge:</strong> Python</li>
+                            <li><a href="your-link-here.html" class="read-more-link" target="_blank" rel="noopener">Read More</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Control system plotter | Jul 2025</div>
+                    <div class="project-info">
+                        <ul>
+                            <li>Help plot multiple control system plots for compairasion</li>
+                            <li><strong>Role:</strong> Sole Developer</li>
+                            <li><strong>Result:</strong> The user inserts a transfer function, in which the output results in Bodie plots to assess the stability of the system</li>
+                            <li><strong>Tools:</strong> MATLAB</li>
+                            <li><strong>Challenge:</strong> </li>
+                            <li><a href="your-link-here.html" class="read-more-link" target="_blank" rel="noopener">Read More</a></li>
+                        </ul>
+                    </div>
+                </div>
+                    
+                <div class="project-card">
+                    <div class="project-title">Responsive Portfolio Website | Jul 2025 - Present</div>
+                    <div class="project-info">
+                        <ul>
+                            <li>Designed and developed a responsive profiolio website to showcase my engineering projects and techinical skills </li>
+                            <li><strong>Role:</strong> Sole Developer</li>
+                            <li><strong>Result:</strong> Delivered a clean, user friendly interface with intutive navigation designed for both desktop and mobile use</li>
+                            <li><strong>Tools:</strong> HTML, CSS, JavaScript</li>
+                            <li><strong>Challenge:</strong>  </li>
+                            <li><a href="https://github.com/injamul-haque01/injamul-haque01.github.io" class="read-more-link" target="_blank" rel="noopener">Read more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <button class="slider-btn next">&#10095;</button>
         </div>
     </section>
@@ -149,27 +169,28 @@
         <h2>Education</h2>
         <div class="education-item">
             <div class="education-row"><span class="edu-university">University of Southampton</span><span class="edu-date">Sep 2022 – Jun 2025</span></div>
+            <div class="education-row-mobile"><span class="edu-university">University of Southampton | Sep 2022 - Jun 2025</span></div>
             <p class="education-paragraph">BEng Aeronautics & Astronautics | Grade: 2:1</p>
         </div>
         <div class="education-item">
-            <div class="education-row"><span class="edu-university">Havant & South Downs College</span><span class="edu-date">Sep 2020 – Jun 2022</span></div>
+            <div class="education-row"><span class="edu-university">Havant and South Downs College </span><span class="edu-date">Sep 2020 – Jun 2022</span></div>
+            <div class="education-row-mobile"><span class="edu-university">Havant and South Downs College | Sep 2020 - Jun 2022</span></div>
             <p class="education-paragraph">A-Levels: Mathematics (A*), Further Maths (A), Physics (A)</p>
         </div>
-        <div class="education-item">
-            <div class="education-row"><span class="edu-university">Priory School, Southsea</span><span class="edu-date">Sep 2015 – Jun 2020</span></div>
-            <p class="education-paragraph">12 GCSEs including 8s/9s in STEM subjects</p>
-        </div>
+
     </section>
 
     <section id="certifications">
         <h2>Certifications & Courses</h2>
         <div class="certification-item">
             <div class="certification-row"><span class="edu-university">Flying Laboratory Course</span><span class="edu-date">Jun 2025</span></div>
+            <div class="certification-row-mobile"><span class="edu-university">Flying Laboratory Course | Jun 2025</span></div>
             <p class="certification-paragraph">Studied flight performance/stability using a Saab 340B+ aircraft</p>
             <p class="certification-paragraph"><strong>Result:</strong> adfsd</p>
         </div>
         <div class="certification-item">
             <div class="certification-row"><span class="edu-university">CMAST Training Programme, Fareham</span><span class="edu-date">Jun 2023</span></div>
+            <div class="certification-row-mobile"><span class="edu-university">Flying Laboratory Course | Jun 2025</span></div>
             <p class="certification-paragraph">Undertook a practical training programme in engineering manufacturing processes at CEMAST, recommended by my university.</p>
             <p class="certification-paragraph"><strong>Result:</strong> Developed skills in engineering manufacturing tasks such as soldering, circuit assembly, and structural repairs to aircraft skin panels.</p>
         </div>
@@ -179,9 +200,9 @@
         <h2>Contact</h2>
         <div class="contact">
             <ul>
-                <li><a href="https://www.linkedin.com/in/injamul-haque-0b20892a1/"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/injamul-haque01"><i class="fab fa-github"></i></a></li>
-                <li><a href="mailto:ihaque.tt@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/injamul-haque-0b20892a1/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/injamul-haque01" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:ihaque.tt@gmail.com" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a></li>
             </ul>
         </div>
     </section>

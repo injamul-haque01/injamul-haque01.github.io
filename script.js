@@ -1,3 +1,5 @@
+// Light mode/Dark mode theme
+
 let darkmode = localStorage.getItem('dark-mode');
 const themeSwitch = document.getElementById('theme-switch');
 
@@ -30,6 +32,8 @@ themeSwitch.addEventListener('click', () => {
     sliderTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
   }
 
+// Slider
+
   nextBtn.addEventListener('click', () => {
     if (currentIndex < cards.length - 1) {
       currentIndex++;
@@ -46,6 +50,7 @@ themeSwitch.addEventListener('click', () => {
 
   window.addEventListener('resize', updateSlider);
 
+// Hamburger navigation bar
 
 let menuList = document.getElementById("menuList")
 menuList.style.maxHeight = "0px";
@@ -53,9 +58,10 @@ menuList.style.maxHeight = "0px";
 function toggleMenu(){
   if(menuList.style.maxHeight == "0px")
   {
-      menuList.style.maxHeight = "300px";
+      menuList.style.maxHeight = "400px";
   }
   else{
       menuList.style.maxHeight = "0px";
   }
 }
+
