@@ -6,6 +6,7 @@
 	--header-bg-color: #dce6ea;
 	--box-color: #e1efef;
 	--button-color: #b2a4bb;
+	--opp-txt-color: white;
 }
 
 .dark-mode {
@@ -16,6 +17,7 @@
 	--header-bg-color: #323345;
 	--box-color: #2c2e3e;
 	--button-color: #e06011;
+	--opp-txt-color: black;
 }
 
 * {
@@ -216,7 +218,7 @@ nav li a:hover,
 
 .profile-image:hover,
 .about:hover {
-	transform: scale(1.1);
+	transform: scale(1.05);
 	border-color: var(--accent-color);
 }
 
@@ -284,13 +286,16 @@ nav li a:hover,
 	border-radius: 2rem;
 	overflow-x: auto;
   	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+	touch-action: pan-x;
 }
 
 .slider-container::-webkit-scrollbar {
   	width: 0;
   	height: 0;
+	display: none;
 }
 
 .slider-track {
@@ -351,7 +356,7 @@ nav li a:hover,
   display: inline-block;
   padding: 0.5rem 1rem;
   background: var(--secondary-color);
-  color: black;
+  color: var(--opp-txt-color);
   font-weight: 600;
   border-radius: 0.5rem;
   text-decoration: none;
