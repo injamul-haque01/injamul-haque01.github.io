@@ -58,7 +58,7 @@ menuList.style.maxHeight = "0px";
 function toggleMenu(){
   if(menuList.style.maxHeight == "0px")
   {
-      menuList.style.maxHeight = "400px";
+      menuList.style.maxHeight = "100vh";
   }
   else{
       menuList.style.maxHeight = "0px";

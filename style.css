@@ -1,24 +1,27 @@
 :root {
-	--primary-color: #12161a;
-	--secondary-color: #1f719d;
-	--accent-color: #ec1458;
-	--bg-color: #f7fdfd;
-	--header-bg-color: #dce6ea;
-	--box-color: #e1efef;
-	--button-color: #b2a4bb;
-	--opp-txt-color: white;
+	--primary-color: rgb(20, 24, 28);
+	--secondary-color: rgb(40, 120, 165);
+	--accent-color: rgb(236, 40, 100);
+	--bg-color: rgb(250, 255, 255);
+	--header-bg-color: rgb(210, 225, 235);
+	--box-color: rgb(230, 245, 245);
+	--button-color: rgb(160, 145, 190);
+	--opp-txt-color: rgb(255, 255, 255);
+	--backdrop-color: rgb(255, 255, 255, 0.5);
 }
 
 .dark-mode {
-	--primary-color: #dcdcdc;
-	--secondary-color: #b9c1df;
-	--accent-color: #ff79c6;
-	--bg-color: #1e1f29;
-	--header-bg-color: #323345;
-	--box-color: #2c2e3e;
-	--button-color: #e06011;
-	--opp-txt-color: black;
+	--primary-color: rgb(230, 230, 230);
+	--secondary-color: rgb(170, 185, 230);
+	--accent-color: rgb(255, 100, 200);
+	--bg-color: rgb(25, 26, 35);
+	--header-bg-color: rgb(60, 62, 85);
+	--box-color: rgb(55, 58, 78);
+	--button-color: rgb(235, 110, 25);
+	--opp-txt-color: rgb(0, 0, 0);
+	--backdrop-color: rgb(25, 26, 35, 0.5);
 }
+
 
 * {
 	margin: 0;
@@ -157,18 +160,20 @@ nav li a:hover,
 		right: 0;
 		flex-direction: column;
 		text-align: center;
-		background: var(--box-color);
 		gap: 0;
 		overflow: hidden;
 		z-index: 1001;
+		background: var(--backdrop-color);
+		backdrop-filter: blur(8px);
 	}
 
 	nav ul li {
-		padding: 20px;
+		padding: 40px;
 	}
 	.menu-icon {
 		display: block;
 	}
+	
 }
 
 /* Shared “card” styles */
@@ -286,6 +291,7 @@ nav li a:hover,
 	border-radius: 2rem;
 	overflow-x: auto;
   	overflow-y: auto;
+	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: none;
 	scrollbar-width: none;

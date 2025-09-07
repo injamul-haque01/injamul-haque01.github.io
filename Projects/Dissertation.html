@@ -90,47 +90,59 @@
             </div>
         </div>
 
-        <div class="slider-container" id="CFD & FEA integration">
-        <button class="slider-btn prev">&#10094;</button>
-            <div class="slider-track">
-                <div class="project-card">
 
-                <div class="project-title">CFD Solver</div>
-                    <div class="project-info">
-                        
-                        <div class="images">
-                            <figure class="image-figure">
-                                <img src="Mesh-domain.jpg">
-                                <figcaption class="figure-caption">
-                                Figure 4: CFD mesh domain
-                                </figcaption>
-                            </figure>
+    <section id="projects">
+        <h2>CFD & FEA</h2>
+        <div class="slider-wrapper">
+            <button class="slider-btn prev">&#10094;</button>
+            
+            <div class="slider-container">
+                <div class="slider-track">
+
+                    <div class="project-card">
+                    <div class="project-title">CFD</div>
+                        <div class="project-info">
+                            <ul>
+                                <li><strong>Domain</strong> Rectangular domain</li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li><strong>Domain:</strong>  </li>
                     </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-title">FEA Solver</div>
-                    <div class="project-info">
-                        
-                        <ul>
-                            <li>Designed recreational UAV in group project</li>
-                            <li><strong>Role:</strong> Project manager, FEA analyst</li>
-                            <li><strong>Tools:</strong> Ansys Mechanical, Excel</li>
-                        </ul>
+                    <div class="project-card">
+                        <div class="project-title">FEA</div>
+                        <div class="project-info">
+                            <ul>
+                                <li>Designed recreational UAV in group project</li>
+                                <li><strong>Role:</strong> Project manager, FEA analyst</li>
+                                <li><strong>Tools:</strong> Ansys Mechanical, Excel</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">CFD & FEA integration</div>
+                        <div class="project-info">
+                            <ul>
+                                <li>Help plot multiple performance data for different airfoil shape. The performance data includes: CL vs AoA, CL vs CD and CL vs L/D</li>
+                                <li><strong>Role:</strong> Sole Developer</li>
+                                <li><strong>Result:</strong> The user can input csv files which contains performance data. The programme automatically plots the performance data, in which you can save as a png file.</li>
+                                <li><strong>Tools:</strong> Python, C++</li>
+                                <li><strong>Challenge:</strong> Python</li>
+                            </ul>
+                        </div>
+                    </div>
                     </div>
                 </div>
+                <button class="slider-btn next">&#10095;</button>
             </div>
-            <button class="slider-btn next">&#10095;</button>
         </div>
+    </section>
 
 
         <div class="about" id="Conclusions & Recommendations">
             <h2>Conclusions & Recommendations</h2>
-            <p>In recent years, the aerospace industry placed an increased emphasis on developing lightweight and fuel-efficient aircrafts to meet strict performance, cost and environmental targets. Composite materials, such as carbon fibre reinforced polymer (CFRP), has become an increased opportunity for modern aircraft due to their high strength to weight ratio and their ability to tailor mechanical properties through changing the fibre orientation.</p>
-            <p>One unique property about composite material, such as CFRP, is to tailor the stiffness of the structure by adjusting the orientation of the fibres. This property of composite has a significant advantage over metallic wings, as it enables increased flexibility to improve and control the static and dynamic response through manipulation of composite material layups.</p>
+            <p>A Euler based CFD solver was conducted to generate the aerodynamical loads on the wing surface, which used inviscid flow conditions. As the Renyolds number for the flow Re=14.342 × 10^6, viscous effects to the wing surface are expected to form. To better account for these effects, a Renyolds averaged Navier-stokes simulations (RANS) approach is proposed in future studies. RANS simulation incorporates turbulence modelling, such as the k-ε or k-ω models, to predict the effects of viscosity to the flow. Implementing RANS simulations would provide more accurate pressure distributions, leading to more accurate aerodynamical load predictions for the structural analysis.</p>
+            
         </div>
 
     </section>

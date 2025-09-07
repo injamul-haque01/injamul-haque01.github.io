@@ -90,8 +90,9 @@
 }
 
 
-.slider-container {
-	min-width: 100%;
+.slider-wrapper {
+	max-width: 100%;
+	width: 100%;
 }
 
 .project-card {
