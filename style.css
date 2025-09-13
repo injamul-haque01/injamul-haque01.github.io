@@ -1,25 +1,34 @@
 :root {
 	--primary-color: rgb(20, 24, 28);
-	--secondary-color: rgb(40, 120, 165);
+	--secondary-color: rgb(0, 120, 110);
 	--accent-color: rgb(236, 40, 100);
 	--bg-color: rgb(250, 255, 255);
 	--header-bg-color: rgb(210, 225, 235);
 	--box-color: rgb(230, 245, 245);
-	--button-color: rgb(160, 145, 190);
+	--button-color: rgb(150, 155, 170);
 	--opp-txt-color: rgb(255, 255, 255);
 	--backdrop-color: rgb(255, 255, 255, 0.5);
+	--shadow-color: rgba(0, 0, 0, 0.3);
+	--name-color: rgb(0, 160, 170);
+
+
+
+
 }
 
 .dark-mode {
-	--primary-color: rgb(230, 230, 230);
-	--secondary-color: rgb(170, 185, 230);
-	--accent-color: rgb(255, 100, 200);
+	--primary-color: rgb(248, 248, 242);
+	--secondary-color: rgb(100, 220, 160);
+	--accent-color: rgb(236, 100, 140);
 	--bg-color: rgb(25, 26, 35);
-	--header-bg-color: rgb(60, 62, 85);
+	--header-bg-color: rgb(68, 71, 90);
 	--box-color: rgb(55, 58, 78);
-	--button-color: rgb(235, 110, 25);
+	--button-color: rgb(200, 160, 90);
 	--opp-txt-color: rgb(0, 0, 0);
 	--backdrop-color: rgb(25, 26, 35, 0.5);
+	--shadow-color: rgba(255, 255, 255, 0.1);
+	--name-color: rgb(80, 250, 123);
+
 }
 
 
@@ -117,8 +126,9 @@ nav{
 }
 
 .name a {
-	color: var(--primary-color);
+ 	color: var(--name-color);
 	text-decoration: none;
+	font-size: 1.5rem;
 }
 
 nav ul{
@@ -145,8 +155,9 @@ nav ul li a {
 }
 
 nav li:hover {
-	transform: scale(1.1)
+	transform: scale(1.05);
 }
+
 nav li a:hover, 
 .name a:hover{
 	color: var(--accent-color)
@@ -190,7 +201,7 @@ nav li a:hover,
 .education-item:hover,
 .certification-item:hover {
 	transform: scale(1.1);
-	box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+	box-shadow: 0 12px 30px var(--shadow-color)
 }
 
 .intro-about {

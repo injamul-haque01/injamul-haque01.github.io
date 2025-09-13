@@ -12,20 +12,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 
-<body>
+<body id="top">
 
 <!-- Navigation bar -->
 
     <nav>
         <div class="name">
-            <h1><a href="#">Injamul Haque</a></h1>
+            <h1><a href="#top">Injamul Haque</a></h1>
         </div>
 
         <ul id="menuList">
             <li><a href="#Background">Background</a></li>
             <li><a href="#CAD">CAD</a></li>
-            <li><a href="#CFD & FEA integration">CFD & FEA integration</a></li>
+            <li><a href="#Simulations">Simulations</a></li>
             <li><a href="#Conclusions & Recommendations">Conclusions</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li><a href="../#"> <i class="fa-solid fa-arrow-left"></i> Main Menu</a></li>
         </ul>
         
@@ -61,90 +62,80 @@
                     <figure class="image-figure">
                         <img src="CAD-CFD.png">
                         <figcaption class="figure-caption">
-                        Figure 1: Airfoil cross-section
-                        </figcaption>
-                    </figure>
-
-                    <figure class="image-figure">
-                        <img src="CAD-CFD.png">
-                        <figcaption class="figure-caption">
-                        Figure 2: CAD model for CFD
+                        Figure 1: CAD model for CFD
                         </figcaption>
                     </figure>
 
                     <figure class="image-figure">
                         <img src="CAD-FEA.png">
                         <figcaption class="figure-caption">
-                        Figure 3: CAD model for CFD
+                        Figure 2: Part of the CAD model for FEA
+                        </figcaption>
+                    </figure>
+
+                    <figure class="image-figure">
+                        <img src="FEA_model.png">
+                        <figcaption class="figure-caption">
+                        Figure 3: Meshed FEA model
                         </figcaption>
                     </figure>
                 </div>
 
                 <div class="CAD-text">
                     <ul>
-                        <li><strong>Software used:</strong> Solidworks </li>
+                        <li><strong>Software used:</strong> Solidworks. The wing skin was further added in Ansys APDL as incoperating both the wing skin and ribs in Solidworks leads to improper solutions (due to improper nodal connection between the internal structure and the wing skin) </li>
                         <li><strong>Main wing dimentions (half wing only!):</strong> 10m root chord, 0.22 taper ratio, 29m span, 9.5 AR, 33 degrees sweep (quarter chord), 5 degree dihedrial </li>
                         <li><strong>Airfoil:</strong> NASA sc(2)-0612. A supercritical airfoil is used over NACA airfoils due to flatter suction surface, which reduces flow acceleration in the upper surface and hence delays the shock generated towards the trailing edge. </li>
                     </ul>
                 </div>
             </div>
         </div>
+    </section>
 
+    <section id="Simulations">
+        <h2>CFD simulations</h2>
+        <div class="simulations-content">
+            <div class="images">
+                <figure class="image-figure">
+                    <img src="Mesh-domain.jpg">
+                    <figcaption class="figure-caption">
+                    Figure 4: Mesh domanin for CFD
+                    </figcaption>
+                </figure>
 
-    <section id="projects">
-        <h2>CFD & FEA</h2>
-        <div class="slider-wrapper">
-            <button class="slider-btn prev">&#10094;</button>
-            
-            <div class="slider-container">
-                <div class="slider-track">
+                <figure class="image-figure">
+                    <img src="Pressure_lower.png">
+                    <figcaption class="figure-caption">
+                    Figure 5: Pressure distribution for the lower surface of the wing
+                    </figcaption>
+                </figure>
 
-                    <div class="project-card">
-                    <div class="project-title">CFD</div>
-                        <div class="project-info">
-                            <ul>
-                                <li><strong>Domain</strong> Rectangular domain</li>
-                            </ul>
-                        </div>
-                    </div>
+                <figure class="image-figure">
+                    <img src="Pressure_upper.png">
+                    <figcaption class="figure-caption">
+                    Figure 6: Pressure distribution for the upper surface of the wing
+                    </figcaption>
+                </figure>
+            </div>
 
-                    <div class="project-card">
-                        <div class="project-title">FEA</div>
-                        <div class="project-info">
-                            <ul>
-                                <li>Designed recreational UAV in group project</li>
-                                <li><strong>Role:</strong> Project manager, FEA analyst</li>
-                                <li><strong>Tools:</strong> Ansys Mechanical, Excel</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-title">CFD & FEA integration</div>
-                        <div class="project-info">
-                            <ul>
-                                <li>Help plot multiple performance data for different airfoil shape. The performance data includes: CL vs AoA, CL vs CD and CL vs L/D</li>
-                                <li><strong>Role:</strong> Sole Developer</li>
-                                <li><strong>Result:</strong> The user can input csv files which contains performance data. The programme automatically plots the performance data, in which you can save as a png file.</li>
-                                <li><strong>Tools:</strong> Python, C++</li>
-                                <li><strong>Challenge:</strong> Python</li>
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <button class="slider-btn next">&#10095;</button>
+            <div class="simulations-text">
+                <ul>
+                    <li><strong>Software used:</strong> Ansys Fluent</li>
+                    <li><strong>Domain type:</strong> Rectangular, dimentions are mentioned on Figure 4</li>
+                    <li><strong>CFD Boundary conditions:</strong> Pressure inlet, Pressure outlet (0Pa gauge), Symmetry at the wing root, Wall (wing surface)</li>
+                    <li><strong>Flow conditions:</strong> Mach 0.85, Altitude 35,000ft (ρ=0.38kg/m^3, μ=1.46x10^-5kg/m-s, a=295m/s), Reynolds number Re=14.342 × 10^6. The velocity of the flow can be found via the following: V = M √(γ R T). The static and stagnation properties are found based on isentropic flow conditions: T / T<sub>0</sub> = ( 1 + ((γ − 1)/2)·M<sup>2</sup> )<sup>-1</sup>, p / p<sub>0</sub> = ( 1 + ((γ − 1)/2)·M<sup>2</sup> )<sup>-γ/(γ − 1)</sup></li>
+                    <li><strong>Turbulence model:</strong> Inviscid (Euler equations)</li>
+                    <li><strong>Result:</strong> Pressure distribution for the wing surface (As shown in Figure 5 and Figure 6), which will act as the aerodynamic loads for the wing</li>
             </div>
         </div>
     </section>
 
 
-        <div class="about" id="Conclusions & Recommendations">
+    <section id="Conclusions & Recommendations">
+        <div class="about">
             <h2>Conclusions & Recommendations</h2>
             <p>A Euler based CFD solver was conducted to generate the aerodynamical loads on the wing surface, which used inviscid flow conditions. As the Renyolds number for the flow Re=14.342 × 10^6, viscous effects to the wing surface are expected to form. To better account for these effects, a Renyolds averaged Navier-stokes simulations (RANS) approach is proposed in future studies. RANS simulation incorporates turbulence modelling, such as the k-ε or k-ω models, to predict the effects of viscosity to the flow. Implementing RANS simulations would provide more accurate pressure distributions, leading to more accurate aerodynamical load predictions for the structural analysis.</p>
-            
         </div>
-
     </section>
 
     <section id="contact">
