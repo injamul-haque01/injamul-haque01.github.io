@@ -20,18 +20,6 @@ themeSwitch.addEventListener('click', () => {
     darkmode !== 'enabled' ? enableDarkMode() : disableDarkMode();
 })
 
-  const sliderTrack = document.querySelector('.slider-track');
-  const prevBtn = document.querySelector('.slider-btn.prev');
-  const nextBtn = document.querySelector('.slider-btn.next');
-
-  let currentIndex = 0;
-  const cards = document.querySelectorAll('.project-card');
-
-  function updateSlider() {
-    const slideWidth = cards[0].offsetWidth;
-    sliderTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-  }
-
 // Hamburger navigation bar
 
 let menuList = document.getElementById("menuList")
@@ -46,8 +34,6 @@ function toggleMenu(){
       menuList.style.maxHeight = "0px";
   }
 }
-
-
 
 // Smooth scrolling for navigation links
 
@@ -75,20 +61,29 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 
 // Slider for projects section
 
-  nextBtn.addEventListener('click', () => {
-    if (currentIndex < cards.length - 1) {
-      currentIndex++;
-      updateSlider();
-    }
-  });
+	document.addEventListener("DOMContentLoaded", () => {
+		const track = document.querySelector(".slider-track");
+		const slides = document.querySelectorAll(".project-card");
+		const prevBtn = document.querySelector(".slider-btn.prev");
+		const nextBtn = document.querySelector(".slider-btn.next");
 
-  prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSlider();
-    }
-  });
+		let index = 0;
 
-  window.addEventListener('resize', updateSlider);
+		function updateSlide() {
+			track.style.transform = `translateX(-${index * 100}%)`;
+		}
 
+		nextBtn.addEventListener("click", () => {
+			if (index < slides.length - 1) {
+				index++;
+				updateSlide();
+			}
+		});
 
+		prevBtn.addEventListener("click", () => {
+			if (index > 0) {
+				index--;
+				updateSlide();
+			}
+		});
+	});

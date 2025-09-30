@@ -47,7 +47,7 @@
     <section id="about-me">
         <div class="intro-about">
             <div class="profile-container">
-                <img src="https://media.licdn.com/dms/image/v2/D4E03AQGoHjQTvIucXw/profile-displayphoto-scale_400_400/B4EZfqQ8H9HwAs-/0/1751982000721?e=1758153600&v=beta&t=09J9eoMncfYG3brwsHcuba3lPQb79IN3hl3tPqlXRF0" alt="Injamul Haque" class="profile-image" />
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQGoHjQTvIucXw/profile-displayphoto-scale_400_400/B4EZfqQ8H9HwAs-/0/1751982000721?e=1761177600&v=beta&t=ZmSspkAMac9vtkd-Se5ilxIWzzGEjYIshR6yw69Iy3c" alt="Injamul Haque" class="profile-image" />
             </div>
             <div class="about">
                 <h2>About Me</h2>
@@ -67,7 +67,7 @@
                     <li><strong>CFD:</strong> Ansys Fluent</li>
                     <li><strong>FEA:</strong> Ansys APDL, Ansys Mechanical</li>
                     <li><strong>CAD:</strong> SolidWorks</li>
-                    <li><strong>Programming/Technical:</strong> Python, MATLAB (in progress), C++ (in progress)</li>
+                    <li><strong>Programming:</strong> Python, MATLAB (in progress), C++ (in progress)</li>
                 </ul>
             </div>
             <div class="skills-category">
@@ -86,45 +86,55 @@
 <!-- Projects-->
 
     <section id="projects">
-        <h2>Projects</h2>
-        <div class="slider-wrapper">
-            <button class="slider-btn prev">&#10094;</button>
-            
-            <div class="slider-container">
-                <div class="slider-track">
+	<h2>Projects</h2>
+	<div class="slider-wrapper">
+		<button class="slider-btn prev">&#10094;</button>
 
-                    <div class="project-card">
-                    <div class="project-title">Dissertation: Effect of ply fiber orientation on the static and dynamic behavior of a composite swept-back wing | Sep 2024 - Jun 2025</div>
-                        <div class="project-info">
-                            <ul>
-                                <li>Reduced the stress, deformation and increased frequency of a swept-back wing by tailoring the CFRP fiber orientation of a swept-back wing skin.</li>
-                                <li><strong>Role:</strong> Independent research project for my final year (year 3) dissertation, with Assistant from supervisor within the same department</li>
-                                <li><strong>Result:</strong> 15.92% stress, 9.29% deflection reduction at 30° fiber angle compared to full aluminium alloy: Al 7075 T6 </li>
-                                <li><strong>Tools:</strong> SolidWorks, Ansys Fluent/APDL/Mechanical, Python (post processing)</li>
-                                <li><strong>Challenges:</strong> Getting throught a steep learning curve by gaining profeciencies in multiple softwares, whilst also ensuring smooth intergration between CFD and FEA solvers</li>
-                                <li><a href="/Projects/Dissertation.html" class="read-more-link" rel="noopener">Read More</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                        
-                    <div class="project-card">
-                        <div class="project-title">Responsive Portfolio Website | Jul 2025 - Present</div>
-                        <div class="project-info">
-                            <ul>
-                                <li>Designed and developed a responsive profiolio website to showcase my engineering projects and techinical skills </li>
-                                <li><strong>Role:</strong> Sole Developer</li>
-                                <li><strong>Result:</strong> Delivered a clean, user friendly interface with intutive navigation designed for both desktop and mobile use</li>
-                                <li><strong>Tools:</strong> HTML, CSS, JavaScript</li>
-                                <li><strong>Challenge:</strong> The Website was initally built for desktop users, which led to layout issues on mobile devices. This was rectified by implementing media queries to modify and optimise key sections for smaller screens.  </li>
-                                <li><a href="https://github.com/injamul-haque01/injamul-haque01.github.io" class="read-more-link" target="_blank" rel="noopener">Source code</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <button class="slider-btn next">&#10095;</button>
-            </div>
-        </div>
+		<div class="slider-container">
+			<div class="slider-track">
+
+				<!-- Slide 1 -->
+				<div class="project-card">
+					<h3 class="project-title">
+						Dissertation: Effect of ply fiber orientation on the static and dynamic behavior of a composite swept-back wing | Sep 2024 - Jun 2025
+					</h3>
+					<div class="project-info">
+						<ul>
+							<li>Reduced the stress, deformation and increased frequency of a swept-back wing by tailoring the CFRP fiber orientation.</li>
+							<li><strong>Role:</strong> Independent research project</li>
+							<li><strong>Result:</strong> 15.92% stress, 9.29% deflection reduction at 30° fiber angle compared to full Al 7075-T6</li>
+							<li><strong>Tools:</strong> SolidWorks, Ansys Fluent, Ansys APDL</li>
+                            <li><strong>Challenges:</strong> The project involves multiple simulation software tools, a strong proficiency in these tools is required to carry out the simulations accurately. Moreover, the transfer of aerodynamic loads between CFD and FEA was complicated by the use of different mesh discretisations. To resolve this, an optimal mesh independent study was initially established for the CFD analysis, which was then used as a reference to determine the optimal mesh for the FEA model.</li>
+							<li><a href="/Projects/Dissertation.html" class="read-more-link">Read More</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Slide 2 -->
+				<div class="project-card">
+					<h3 class="project-title">Responsive Portfolio Website | Jul 2025 - Present</h3>
+					<div class="project-info">
+						<ul>
+							<li>Designed and developed a responsive portfolio website to showcase projects.</li>
+							<li><strong>Role:</strong> Sole Developer</li>
+							<li><strong>Result:</strong> Clean, user-friendly design for desktop and mobile</li>
+							<li><strong>Tools:</strong> HTML, CSS, JavaScript</li>
+                            <li><strong>Challenges:</strong> Ensuring compatibility and responsiveness across various devices, suitable for both desktop and mobile users. This was addressed by using media queries and thorough testing on different browsers and screen sizes.</li>
+							<li><a href="https://github.com/injamul-haque01/injamul-haque01.github.io" target="_blank" class="read-more-link">Source code</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Add more slides here -->
+
+			</div>
+		</div>
+
+		<button class="slider-btn next">&#10095;</button>
+	</div>
     </section>
+
+<!-- Education & Certifications -->
 
     <section id="education">
         <h2>Education</h2>

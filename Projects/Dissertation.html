@@ -24,7 +24,8 @@
         <ul id="menuList">
             <li><a href="#Background">Background</a></li>
             <li><a href="#CAD">CAD</a></li>
-            <li><a href="#Simulations">Simulations</a></li>
+            <li><a href="#Simulations_CFD">CFD</a></li>
+            <li><a href="#Simulations_FEA">CFD</a></li>
             <li><a href="#Conclusions & Recommendations">Conclusions</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="../#"> <i class="fa-solid fa-arrow-left"></i> Main Menu</a></li>
@@ -46,7 +47,7 @@
 
 <main>
 
-<!-- Projects-->
+<!-- Background-->
 
     <section id="projects">
         <div class="about" id="Background">
@@ -54,6 +55,8 @@
             <p>In recent years, the aerospace industry placed an increased emphasis on developing lightweight and fuel-efficient aircrafts to meet strict performance, cost and environmental targets. Composite materials, such as carbon fibre reinforced polymer (CFRP), has become an increased opportunity for modern aircraft due to their high strength to weight ratio and their ability to tailor mechanical properties through changing the fibre orientation.</p>
             <p>One unique property about composite material, such as CFRP, is the ability to tailor the stiffness of the structure by adjusting the orientation of the fibres. This property of composite has a significant advantage over metallic wings, as it enables increased flexibility to improve and control the static and dynamic response through manipulation of composite material layups.</p>
         </div>
+
+<!-- CAD-->
 
         <div class="CAD">
             <h2>CAD</h2>
@@ -92,7 +95,9 @@
         </div>
     </section>
 
-    <section id="Simulations">
+<!-- CFD simulations-->
+
+    <section id="Simulations_CFD">
         <h2>CFD simulations</h2>
         <div class="simulations-content">
             <div class="images">
@@ -130,6 +135,39 @@
         </div>
     </section>
 
+<!-- FEA simulations-->
+
+    <section id="Simulations_FEA">
+        <h2>FEA simulations</h2>
+        <div class="simulations-content">
+            <div class="images">
+                <figure class="image-figure">
+                    <img src="FEA_deformation.png">
+                    <figcaption class="figure-caption">
+                    Figure 7: Deformation of the wing under aerodynamic loads
+                    </figcaption>
+                </figure>
+
+                <figure class="image-figure">
+                    <img src="FEA_stress.png">
+                    <figcaption class="figure-caption">
+                    Figure 8: Von-mises stress distribution of the wing under aerodynamic loads
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="simulations-text">
+                <ul>
+                    <li><strong>Software used:</strong> Ansys APDL</li>
+                    <li><strong>Element type:</strong> SHELL281 for the wing skin, Solid285 for the ribs and spars</li>
+                    <li><strong>Material properties:</strong> Aluminium alloy 7075-T6 for the ribs and spars (E=71.7GPa, ν=0.33, ρ=2810kg/m^3), CFRP for the wing skin (E1=135GPa, E2=10GPa, G12=5GPa, ν12=0.3, ρ=1600kg/m^3)</li>
+                    <li><strong>Boundary conditions:</strong> Fixed at the root of the wing (to simulate the connection to the fuselage)</li>
+                    <li><strong>Loading conditions:</strong> Pressure loads from CFD simulations applied to the wing surface</li>
+                    <li><strong>Result:</strong> Maximum displacement of 1.83m at the wing tip (6.3% of the semi-span), maximum von-mises stress of 324MPa at the wing root (within the yield strength of both aluminium alloy 7075-T6 and CFRP)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <section id="Conclusions & Recommendations">
         <div class="about">

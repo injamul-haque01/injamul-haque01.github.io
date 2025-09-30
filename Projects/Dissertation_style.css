@@ -90,7 +90,8 @@
 }
 
 
-#Simulations {
+#Simulations_CFD, 
+#Simulations_FEA {
 	padding: 20px 0;
 	background: var(--box-color);
 	border-radius: 1.5rem;
@@ -98,7 +99,8 @@
 	margin: 3rem auto;
 }
 
-#Simulations h2 {
+#Simulations_CFD h2 
+#Simulations_FEA h2 {
 	text-align: center;
 	font-size: 1.5rem;
 	margin: 0 0 20px 0;
