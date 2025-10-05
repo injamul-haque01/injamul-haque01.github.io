@@ -1,0 +1,192 @@
+@media (max-width: 1050px) {
+	nav ul{
+		position: absolute;
+		top: 70px;
+		left: 0;
+		right: 0;
+		flex-direction: column;
+		text-align: center;
+		gap: 0;
+		overflow: hidden;
+		z-index: 1001;
+		background: var(--backdrop-color);
+		backdrop-filter: blur(8px);
+	}
+
+	nav ul li {
+		padding: 40px;
+	}
+	.menu-icon {
+		display: block;
+	}
+	
+}
+
+/* Dissertation - Start */
+
+.background,
+.conclusions {
+/* Background & Conclusions utilises the same styling*/
+	background: var(--box-color);
+	border-radius: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap:40px;
+	padding: 40px;
+	height:500px;
+	overflow-y: auto;
+}
+
+.background:hover,
+.conclusions:hover {
+	transform: scale(1.05);
+	box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+.background::-webkit-scrollbar,
+.conclusions::-webkit-scrollbar {
+    display: none;
+}
+
+.CAD,
+.CFD,
+.FEA {
+	background-color: var(--box-color);
+	border-radius: 2rem;
+	padding-top: 40px;
+	height:600px;
+	overflow-y: auto;
+}
+
+.CAD::-webkit-scrollbar,
+.CFD::-webkit-scrollbar,
+.FEA::-webkit-scrollbar {
+	display: none;
+}
+
+.CAD:hover,
+.CFD:hover,
+.FEA:hover {
+	transform: scale(1.05);
+	box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+.Content {
+	display: flex;
+	flex-direction: column;
+}
+
+.images {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.image-figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: calc(50% - 6rem);
+}
+
+.image-figure img {
+  	width: 75%;
+  	height: auto;
+  	display: block;
+}
+
+.figure-caption {
+	margin: 20px;
+	font-size: 1.1rem;
+	color: var(--secondary-color);
+	text-align: center;
+}
+
+.Text ul {
+	padding: 40px 20px;
+}
+
+.Text li {
+	padding: 10px;
+	list-style: none;
+}
+
+@media (max-width: 800px) {
+.images {
+	flex-direction: column;
+	align-items: center;
+}
+}
+
+.table-container {
+	overflow-x: auto;
+}
+
+.table-container::-webkit-scrollbar {
+	display: none;
+}
+
+.material-table {
+	width: 80%;
+	text-align: center;
+	margin: 40px auto;
+}
+
+.material-table caption {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+	color: var(--secondary-color);
+}
+
+.material-table,
+.material-table td,
+.material-table th {
+	border: 1px solid var(--primary-color);
+	padding: 10px;
+	border-collapse: collapse;
+}
+
+.material-table th,
+.material-table td {
+	border: 1px solid var(--primary-color);
+	padding: 10px;
+}
+
+.material-table th {
+	background-color: var(--table-header-bg);
+}
+
+.material-table tr:nth-child(odd) {
+	background-color: var(--table-row-odd);
+}
+
+.material-table tr:nth-child(even) {
+	background-color: var(--table-row-even);
+}
+
+.simulations-content {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 0;
+	background: var(--box-color);
+	border-radius: 1.5rem;
+	width: 100%;
+	margin: 3rem auto;
+}
+
+.simulations-content:hover {
+	transform: scale(1.05);
+	box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+.simulations-text ul {
+	list-style: none;
+}
+
+.simulations-text li {
+	padding: 20px 40px;
+	border-radius: 1rem;
+	font-size: 1rem;
+}
+
+/* Dissertation - End */

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Injamul Haque Portfolio</title>
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="Dissertation_style.css">
+    <link rel="stylesheet" href="Projects_style.css">
     <script src="../script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
@@ -25,8 +25,8 @@
             <li><a href="#Background">Background</a></li>
             <li><a href="#CAD">CAD</a></li>
             <li><a href="#Simulations_CFD">CFD</a></li>
-            <li><a href="#Simulations_FEA">CFD</a></li>
-            <li><a href="#Conclusions & Recommendations">Conclusions</a></li>
+            <li><a href="#Simulations_FEA">FEA</a></li>
+            <li><a href="#Conclusions">Conclusions</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="../#"> <i class="fa-solid fa-arrow-left"></i> Main Menu</a></li>
         </ul>
@@ -49,42 +49,37 @@
 
 <!-- Background-->
 
-    <section id="projects">
-        <div class="about" id="Background">
-            <h2>Background</h2>
+    <section id="Background">
+        <h2>Background</h2>
+        <div class="background" id="Background">
             <p>In recent years, the aerospace industry placed an increased emphasis on developing lightweight and fuel-efficient aircrafts to meet strict performance, cost and environmental targets. Composite materials, such as carbon fibre reinforced polymer (CFRP), has become an increased opportunity for modern aircraft due to their high strength to weight ratio and their ability to tailor mechanical properties through changing the fibre orientation.</p>
             <p>One unique property about composite material, such as CFRP, is the ability to tailor the stiffness of the structure by adjusting the orientation of the fibres. This property of composite has a significant advantage over metallic wings, as it enables increased flexibility to improve and control the static and dynamic response through manipulation of composite material layups.</p>
         </div>
+    </section>
 
 <!-- CAD-->
-
+ 
+    <section id="CAD">
+        <h2>CAD</h2>
         <div class="CAD">
-            <h2>CAD</h2>
-            <div class="CAD-content" id="CAD">
+            <div class="Content" id="CAD">
                 <div class="images">
                     <figure class="image-figure">
                         <img src="CAD-CFD.png">
                         <figcaption class="figure-caption">
-                        Figure 1: CAD model for CFD
+                        Figure 1: Half wing CAD model (External structure view)
                         </figcaption>
                     </figure>
 
                     <figure class="image-figure">
                         <img src="CAD-FEA.png">
                         <figcaption class="figure-caption">
-                        Figure 2: Part of the CAD model for FEA
-                        </figcaption>
-                    </figure>
-
-                    <figure class="image-figure">
-                        <img src="FEA_model.png">
-                        <figcaption class="figure-caption">
-                        Figure 3: Meshed FEA model
+                        Figure 2: Half wing CAD model (Internal structure view)
                         </figcaption>
                     </figure>
                 </div>
 
-                <div class="CAD-text">
+                <div class="Text">
                     <ul>
                         <li><strong>Software used:</strong> Solidworks. The wing skin was further added in Ansys APDL as incoperating both the wing skin and ribs in Solidworks leads to improper solutions (due to improper nodal connection between the internal structure and the wing skin) </li>
                         <li><strong>Main wing dimentions (half wing only!):</strong> 10m root chord, 0.22 taper ratio, 29m span, 9.5 AR, 33 degrees sweep (quarter chord), 5 degree dihedrial </li>
@@ -98,39 +93,34 @@
 <!-- CFD simulations-->
 
     <section id="Simulations_CFD">
-        <h2>CFD simulations</h2>
-        <div class="simulations-content">
-            <div class="images">
-                <figure class="image-figure">
-                    <img src="Mesh-domain.jpg">
-                    <figcaption class="figure-caption">
-                    Figure 4: Mesh domanin for CFD
-                    </figcaption>
-                </figure>
+        <h2>CFD</h2>
+        <div class="CFD">
+            <div class="Content" id="CFD">
+                <div class="images">
+                    <figure class="image-figure">
+                        <img src="Mesh-domain.jpg">
+                        <figcaption class="figure-caption">
+                        Figure 3: Half wing CAD model (External structure view)
+                        </figcaption>
+                    </figure>
 
-                <figure class="image-figure">
-                    <img src="Pressure_lower.png">
-                    <figcaption class="figure-caption">
-                    Figure 5: Pressure distribution for the lower surface of the wing
-                    </figcaption>
-                </figure>
+                    <figure class="image-figure">
+                        <img src="Mesh-wing.png">
+                        <figcaption class="figure-caption">
+                        Figure 4: Half wing CAD model (Internal structure view)
+                        </figcaption>
+                    </figure>
+                </div>
 
-                <figure class="image-figure">
-                    <img src="Pressure_upper.png">
-                    <figcaption class="figure-caption">
-                    Figure 6: Pressure distribution for the upper surface of the wing
-                    </figcaption>
-                </figure>
-            </div>
-
-            <div class="simulations-text">
-                <ul>
-                    <li><strong>Software used:</strong> Ansys Fluent</li>
-                    <li><strong>Domain type:</strong> Rectangular, dimentions are mentioned on Figure 4</li>
-                    <li><strong>CFD Boundary conditions:</strong> Pressure inlet, Pressure outlet (0Pa gauge), Symmetry at the wing root, Wall (wing surface)</li>
-                    <li><strong>Flow conditions:</strong> Mach 0.85, Altitude 35,000ft (ρ=0.38kg/m^3, μ=1.46x10^-5kg/m-s, a=295m/s), Reynolds number Re=14.342 × 10^6. The velocity of the flow can be found via the following: V = M √(γ R T). The static and stagnation properties are found based on isentropic flow conditions: T / T<sub>0</sub> = ( 1 + ((γ − 1)/2)·M<sup>2</sup> )<sup>-1</sup>, p / p<sub>0</sub> = ( 1 + ((γ − 1)/2)·M<sup>2</sup> )<sup>-γ/(γ − 1)</sup></li>
-                    <li><strong>Turbulence model:</strong> Inviscid (Euler equations)</li>
-                    <li><strong>Result:</strong> Pressure distribution for the wing surface (As shown in Figure 5 and Figure 6), which will act as the aerodynamic loads for the wing</li>
+                <div class="Text">
+                    <ul>
+                        <li><strong>Software used:</strong> ANSYS Fluent</li>
+                        <li><strong>Mesh type:</strong> Unstructured tetrahedral mesh with reifinment near the wing surface to capture pressure gradients and accurate geometry.</li>
+                        <li><strong>General flow properties:</strong> Invisid, M = 0.85 at 35,000ft, static pressure, static temperature and static density can be found based on International standard atmosphere (ISA) conditions.</li>
+                        <li><strong>Inlet and outlet condidions: </strong>Pressure inlet and pressure outlet, pressure and temperature can be found from assuming isentropic flow conditions, where p0 / p = (1 + ((γ - 1) / 2) * M²)^(γ / (γ - 1)), T0 / T = 1 + ((γ - 1) / 2) * M².</li>
+                        <li><strong>Solver settings:</strong> Steady state, Pressure-based solver, Coupled scheme for pressure-velocity coupling, Second-order upwind for spatial discretisation.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -138,40 +128,91 @@
 <!-- FEA simulations-->
 
     <section id="Simulations_FEA">
-        <h2>FEA simulations</h2>
-        <div class="simulations-content">
-            <div class="images">
-                <figure class="image-figure">
-                    <img src="FEA_deformation.png">
-                    <figcaption class="figure-caption">
-                    Figure 7: Deformation of the wing under aerodynamic loads
-                    </figcaption>
-                </figure>
+        <h2>FEA</h2>
+        <div class="FEA">
+            <div class="Content" id="FEA">
+                <div class="images">
+                    <figure class="image-figure">
+                        <img src="FEA_model.png">
+                        <figcaption class="figure-caption">
+                        Figure 1: Half wing CAD model (External structure view)
+                        </figcaption>
+                    </figure>
 
-                <figure class="image-figure">
-                    <img src="FEA_stress.png">
-                    <figcaption class="figure-caption">
-                    Figure 8: Von-mises stress distribution of the wing under aerodynamic loads
-                    </figcaption>
-                </figure>
-            </div>
+                    <figure class="image-figure">
+                        <img src="Mesh-wing.png">
+                        <figcaption class="figure-caption">
+                        Figure 2: Half wing CAD model (Internal structure view)
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="Text">
+                    <ul>
+                        <li><strong>Software used:</strong> ANSYS APDL, ANSYS Mechanical (for transfer of aerodynamic loads)</li>
+                        <li><strong>Element type:</strong> SHELL281 for the wing skin and ribs, SOLID285 for the spars and ribs.</li>
+                        <li><strong>Material properties:</strong> Carbon fibre reinforced polymer (CFRP) for the wing skin, Aluminium alloy for the spars and ribs. More details about their mechanical properties are listed on Table 1</li>
+                        <li><strong>Boundary conditions:</strong> Fixed boundary condition at the root chord to simulate the wing-fuselage connection. Aerodynamical loads from the CFD simulations were applied to the wing surface as pressure loads.</li>
+                    </ul>
+                </div>
+                <div class="table-container">
+                    <table class="material-table">
+                        <caption>Table 1: Material properties used in the FEA simulations</caption>
+                        <tr>
+                            <th>Material</th>
+                            <th>Properties</th>
+                            <th>Values</th>
+                            <th>Unit</th>
+                        </tr>
 
-            <div class="simulations-text">
-                <ul>
-                    <li><strong>Software used:</strong> Ansys APDL</li>
-                    <li><strong>Element type:</strong> SHELL281 for the wing skin, Solid285 for the ribs and spars</li>
-                    <li><strong>Material properties:</strong> Aluminium alloy 7075-T6 for the ribs and spars (E=71.7GPa, ν=0.33, ρ=2810kg/m^3), CFRP for the wing skin (E1=135GPa, E2=10GPa, G12=5GPa, ν12=0.3, ρ=1600kg/m^3)</li>
-                    <li><strong>Boundary conditions:</strong> Fixed at the root of the wing (to simulate the connection to the fuselage)</li>
-                    <li><strong>Loading conditions:</strong> Pressure loads from CFD simulations applied to the wing surface</li>
-                    <li><strong>Result:</strong> Maximum displacement of 1.83m at the wing tip (6.3% of the semi-span), maximum von-mises stress of 324MPa at the wing root (within the yield strength of both aluminium alloy 7075-T6 and CFRP)</li>
-                </ul>
+                        <!-- CFRP with nanotube perpeg -->
+                        <tr>
+                            <td rowspan="4">CFRP with nanotube perpeg (60% Carbon fibre)</td>
+                            <td>Young's modulus (Ex, Ey, Ez)</td>
+                            <td>162, 22.58, 22.58</td>
+                            <td>GPa</td>
+                        </tr>
+                        <tr>
+                            <td>Poisson's ratios (νxy, νxz, νyz)</td>
+                            <td>0.3, 0.3, 0.14</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Shear modulus (Gxy, Gxz, Gyz)</td>
+                            <td>5.91, 5.91, 9</td>
+                            <td>GPa</td>
+                        </tr>
+                        <tr>
+                            <td>Density</td>
+                            <td>1538</td>
+                            <td>kg/m³</td>
+                        </tr>
+
+                        <!-- Aluminium 7075 T6 -->
+                        <tr>
+                            <td rowspan="3">Aluminium 7075 T6 alloy</td>
+                            <td>Young's modulus</td>
+                            <td>71 GPa, 0.33, 2810 kg/m³</td>
+                            <td>GPa</td>
+                        </tr>
+                        <tr>
+                            <td>Poisson's ratio</td>
+                            <td>0.33</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Density</td>
+                            <td>2810</td>
+                            <td>kg/m³</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="Conclusions & Recommendations">
-        <div class="about">
-            <h2>Conclusions & Recommendations</h2>
+    <section id="Conclusions">
+        <h2>Conclusions</h2>
+        <div class="conclusions">
             <p>A Euler based CFD solver was conducted to generate the aerodynamical loads on the wing surface, which used inviscid flow conditions. As the Renyolds number for the flow Re=14.342 × 10^6, viscous effects to the wing surface are expected to form. To better account for these effects, a Renyolds averaged Navier-stokes simulations (RANS) approach is proposed in future studies. RANS simulation incorporates turbulence modelling, such as the k-ε or k-ω models, to predict the effects of viscosity to the flow. Implementing RANS simulations would provide more accurate pressure distributions, leading to more accurate aerodynamical load predictions for the structural analysis.</p>
         </div>
     </section>

@@ -10,6 +10,10 @@
 	--backdrop-color: rgb(255, 255, 255, 0.5);
 	--shadow-color: rgba(0, 0, 0, 0.3);
 	--name-color: rgb(0, 160, 170);
+	--table-row-odd: rgb(245, 250, 250);
+	--table-row-even: rgb(225, 240, 240);
+	--table-header-bg: rgb(210, 230, 235);
+
 }
 
 .dark-mode {
@@ -24,6 +28,10 @@
 	--backdrop-color: rgb(25, 26, 35, 0.5);
 	--shadow-color: rgba(255, 255, 255, 0.1);
 	--name-color: rgb(80, 250, 123);
+	--table-row-odd: rgb(40, 42, 55);
+	--table-row-even: rgb(55, 58, 75);
+	--table-header-bg: rgb(68, 71, 90);
+
 }
 
 * {
@@ -113,25 +121,25 @@ body {
 
 nav{
 	width: 100%;
-	padding: 10px 30px;
+	padding: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background: var(--header-bg-color);
-	position: fixed;
 	height: 70px;
+	position: fixed;
 	z-index: 1001;
 }
 
 .name a {
  	color: var(--name-color);
 	text-decoration: none;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 }
 
 nav ul{
 	display: flex;
-	gap: 30px;
+	gap: 40px;
 }
 
 nav ul li {
@@ -197,7 +205,7 @@ nav li a:hover,
 .intro-about {
 	display: flex;
 	align-items: center;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .profile-container {
@@ -205,7 +213,6 @@ nav li a:hover,
 	min-width: 320px;
 	padding: 40px;
 	gap: 10px;
-	padding-bottom: 80px;
 }
 
 .profile-image {
@@ -217,21 +224,60 @@ nav li a:hover,
 }
 
 .about {
-	padding: 0 20px 20px 20px;
+	padding:20px 40px 40px 40px;
+	width: 65%;
 	text-align: center;
 	background-color: var(--box-color);
 	border-radius: 2rem;
+	height: 500px;
+	overflow-y: auto;
+}
+
+.about::-webkit-scrollbar {
+	display: none;
 }
 
 .about p {
 	line-height: 1.7;
+	margin-bottom: 20px;
 }
+
+.cv-link {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--opp-txt-color);
+  padding: 10px 20px;
+  border-radius: 1rem;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.cv-link:hover {
+	background-color: var(--accent-color);
+	transform: translateY(-2px);
+	opacity: 1;
+}
+
 
 .profile-image:hover,
 .about:hover {
 	transform: scale(1.05);
 	border-color: var(--accent-color);
 	box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+
+
+@media (max-width: 900px) {
+	.intro-about {
+		flex-direction: column;
+	}
+	
+	.about {
+		width: 100%;
+		margin: 0 auto;
+		padding: 20px 20px 40px 20px;
+	}
 }
 
 /* Skills */
@@ -371,6 +417,7 @@ nav li a:hover,
 
 .read-more-link:hover {
 	background-color: var(--accent-color);
+	transform: translateY(-2px);
 	opacity: 1;
 }
 
@@ -476,4 +523,5 @@ nav li a:hover,
 footer {
 	text-align: center;
 	color: var(--secondary-color);
+	padding-top: 200px;
 }
