@@ -190,3 +190,34 @@
 }
 
 /* Dissertation - End */
+
+
+.aims {
+	background: var(--box-color);
+	border-radius: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap:40px;
+	padding: 40px;
+	height:500px;
+	overflow-y: auto;
+}
+
+.aims::-webkit-scrollbar {
+	display: none;
+}
+
+.aims ul {
+	list-style: disc;
+	padding-left: 20px;
+}
+
+.aims li {
+	padding: 10px 0;
+	font-size: 1.1rem;
+}
+
+.aims:hover {
+	transform: scale(1.05);
+	box-shadow: 0 12px 30px var(--shadow-color);
+}

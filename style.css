@@ -242,23 +242,6 @@ nav li a:hover,
 	margin-bottom: 20px;
 }
 
-.cv-link {
-  display: inline-block;
-  background-color: var(--secondary-color);
-  color: var(--opp-txt-color);
-  padding: 10px 20px;
-  border-radius: 1rem;
-  text-decoration: none;
-  opacity: 0.5;
-}
-
-.cv-link:hover {
-	background-color: var(--accent-color);
-	transform: translateY(-2px);
-	opacity: 1;
-}
-
-
 .profile-image:hover,
 .about:hover {
 	transform: scale(1.05);
