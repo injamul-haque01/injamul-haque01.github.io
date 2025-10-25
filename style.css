@@ -407,7 +407,7 @@ nav li a:hover,
 /* Education & Certifications */
 .education-item,
 .certification-item {
-	margin: 40px 10px;
+	margin: 40px 20px 80px 20px;
 	background: var(--box-color);
 	border-radius: 2rem;
 }
@@ -443,7 +443,7 @@ nav li a:hover,
 .edu-date {
 	font-size: 1.2rem;
 	color: var(--secondary-color);
-	padding: 0 20px;
+	padding: 0 20px 20px 20px;
 }
 
 .education-paragraph,

@@ -50,7 +50,8 @@
 
 .CAD,
 .CFD,
-.FEA {
+.FEA,
+.Results {
 	background-color: var(--box-color);
 	border-radius: 2rem;
 	padding-top: 40px;
@@ -60,13 +61,15 @@
 
 .CAD::-webkit-scrollbar,
 .CFD::-webkit-scrollbar,
-.FEA::-webkit-scrollbar {
+.FEA::-webkit-scrollbar,
+.Results::-webkit-scrollbar {
 	display: none;
 }
 
 .CAD:hover,
 .CFD:hover,
-.FEA:hover {
+.FEA:hover,
+.Results:hover {
 	transform: scale(1.05);
 	box-shadow: 0 12px 30px var(--shadow-color);
 }
