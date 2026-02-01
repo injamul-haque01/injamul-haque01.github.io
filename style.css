@@ -404,37 +404,33 @@ nav li a:hover,
 	opacity: 1;
 }
 
-/* Education & Certifications */
-.education-item,
-.certification-item {
+/* Education */
+
+.education-item{
 	margin: 40px 20px 80px 20px;
 	background: var(--box-color);
 	border-radius: 2rem;
 }
 
-.education-row,
-.certification-row {
+.education-row{
 	display: flex;
 	justify-content: space-between;
 	font-weight: bold;
 	padding: 20px 20px;
 }
 
-.education-row-mobile,
-.certification-row-mobile {
+.education-row-mobile{
 	font-weight: bold;
 	padding: 40px 20px;
 	display: none;
 }
 
 @media (max-width: 768px) {
-	.education-row,
-	.certification-row {
+	.education-row{
 		display: none;
 	}
 
-	.education-row-mobile,
-	.certification-row-mobile {
+	.education-row-mobile{
 		display: flex;
 	}
 }
@@ -446,8 +442,7 @@ nav li a:hover,
 	padding: 0 20px 20px 20px;
 }
 
-.education-paragraph,
-.certification-paragraph {
+.education-paragraph{
 	padding: 0 40px 20px 40px;
 }
 
